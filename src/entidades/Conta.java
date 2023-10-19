@@ -11,10 +11,10 @@ public class Conta {
 		this.numero = numero;
 	}
 	
-	public Conta(int numero, String nomeDoTitular, double saldo) {
+	public Conta(int numero, String nomeDoTitular, double depositoInicial) {
 		this.nomeDoTitular = nomeDoTitular;
 		this.numero = numero;
-		this.saldo = saldo;
+		deposito(depositoInicial);
 	}
 	
 	public int getNumero() { return numero; }
@@ -30,7 +30,7 @@ public class Conta {
 	public double saque(double valorASacar) {
 		saldo -= (valorASacar + 5.00);
 		return valorASacar;
-	}	
+	}
 	
 	public String toString() { return "\n----- Dados da conta -----\nNumero da conta: " +
 			numero + "\nNome do titular: " +	nomeDoTitular + "\nSaldo em conta: R$ " +
